@@ -41,12 +41,6 @@
     padding-left: 20px;
     
 }
-.plus{
-    border-style: solid;
-    padding-left: 2px;
-    padding-bottom: 0px;
-    height: 100%;
-}
 
 .innerContainerRight{
     border-style: dashed;
@@ -64,5 +58,30 @@
 .sum{
     border-style: solid;
     border-color: blueviolet;
+    padding-right: 0px;
+    display: flexbox;
 }
 
+.plusDiv{
+        background-color: green($color: #000000);
+
+    @media (min-width: 801px) {
+        background-color: red;
+    }
+}
+
+.plus{
+    border-style: solid;
+    padding-bottom: 0px;
+    height: 100%;
+}
+
+.folderDiv{
+    margin: 0 auto;
+}
+
+.folder{
+    border-style: solid;
+    padding-bottom: 0px;
+    height: 100%;
+}
