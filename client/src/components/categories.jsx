@@ -51,8 +51,6 @@ const Categories = () => {
       {categoryList.map((category) => (
         <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter(category.code)}>{category.title}</button></Link>
       ))}
-      <button>PublicationTEST</button>
-      <button>Search</button>
     </div>
   )
 }
