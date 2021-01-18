@@ -23,30 +23,34 @@ const Categories = () => {
   }
 
   const handleClick = (e) => {
-  
     dispatch(updateCategory(category))
   }
 
+  const categoryList = [
+    {code: 'regional', title: 'REGIONAL'},
+    {code: 'technology', title: 'TECHNOLOGY'},
+    {code: 'lifestyle', title: 'LIFESTYLE'},
+    {code: 'business', title: 'BUSINESS'},
+    {code: 'general', title: 'GENERAL'},
+    {code: 'program ming', title: 'PROGRAMMING'},
+    {code: 'science', title: 'SCIENCE'},
+    {code: 'entertainment', title: 'ENTERTAINMENT'},
+    {code: 'world', title: 'WORLD'},
+    {code: 'sports', title: 'SPORTS'},
+    {code: 'finance', title: 'FINANCE'},
+    {code: 'academia', title: 'ACADEMIA'},
+    {code: 'politics', title: 'POLITICS'},
+    {code: 'health', title: 'HEALTH'},
+    {code: 'opinion', title: 'OPINION'},
+    {code: 'food', title: 'FOOD'},
+    {code: 'game', title: 'GAME'},
+  ]
+
   return (
     <div className="margin">
-<Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('regional')}>REGIONAL</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('technology')}>TECHNOLOGY</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('lifestyle')}>LIFESTYLE</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('business')}>BUSINESS</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('general')}>GENERAL</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('programming')}>PROGRAMMING</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('science')}>SCIENCE</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('world')}>WORLD</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('sports')}>SPORTS</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('finance')}>FINANCE</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('academia')}>ACADEMIA</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('politics')}>POLITICS</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('health')}>HEALTH</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('opinion')}>OPINION</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('food')}>FOOD</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('game')}>GAME</button></Link>
-      <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter('food')}>FOOD</button></Link>
-
+      {categoryList.map((category) => (
+        <Link to={{pathname: '/topic'}} ><button onClick={handleClick} onMouseEnter={mouseEnter(category.code)}>{category.title}</button></Link>
+      ))}
       <button>PublicationTEST</button>
       <button>Search</button>
     </div>
