@@ -1,4 +1,4 @@
-const password = require('passport')
+const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
 const UserModel = require('../models/user')
 
@@ -15,4 +15,4 @@ async (email, password, done) => {
 
     return (done, user);
 }
-))
+)) 

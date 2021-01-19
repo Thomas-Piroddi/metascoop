@@ -1,3 +1,4 @@
+
 const express = require('express');
 const router = express.Router();
 const passport = require("passport");
@@ -75,7 +76,7 @@ router.post("/:username/add-profile-picture",  function (req, res) {
           },
         });
       }
-   
+
        let update =  { profile: req.files[0].location };
        //console.log(update)
       await User.findOneAndUpdate(filter, update, {new: true})

@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Express Backend for metascoop",
   "main": "app.js",
-  
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -28,5 +27,5 @@
   },
   "engines": {
     "node": "10.x"
-}
+  }
 }

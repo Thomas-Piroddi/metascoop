@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+// import React, { useState, useEffect } from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './categories.scoped.scss'
 
 import { useDispatch } from 'react-redux'
-import { updateCategory } from '../actions/newsObjects'
+import { updateCategory } from '../actions/newsAPI'
 
 const Categories = () => {
   const [category, setCategory] = useState('')
